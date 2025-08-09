@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/src/style.css" />
+        <title>Demo</title>
+    </head>
+    <body class="bg-[#F0EEEB]">
+        <!-- loader -->
+        <div class="loader absolute inset-0">
+            <div class="h-[5vw] max-h-[3rem] py-4 px-12 bg-[#252525]"></div>
+            <div
+                class="h-[calc(100dvh-min(3rem,5vw))] grid place-content-center bg-[#252525]"
+            >
+                <p
+                    class="text-[#F0EEEB] flex items-center text-3xl -mt-[min(3rem,5vw)] overflow-y-hidden leading-none py-0.5 loader-text will-change-transform"
+                >
+                    <span class="mr-[0.5ch] loader-text-1">All things </span>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="31"
+                        height="30"
+                        viewBox="0 0 31 30"
+                        fill="none"
+                        class="loader-icon animate-slow-spin"
+                    >
+                        <g clip-path="url(#clip0_1288_2703)">
+                            <path
+                                d="M26.0646 3.98584C32.8025 10.0517 32.3369 21.2863 25.1347 26.7944C24.9582 26.9289 24.1299 27.5657 23.9853 27.5287L20.0644 22.1761C19.9296 22.3144 19.2079 22.5649 19.2349 22.7414L21.2983 28.8505C21.0912 29.1899 20.6685 29.2047 20.3389 29.3071C13.8632 31.3361 6.94522 28.8196 3.23627 23.1227C-1.04612 16.5434 0.572489 7.67475 6.82024 3.03924C7.0702 2.85411 7.45372 2.58507 7.72573 2.49127L11.5339 7.73275C11.7533 7.90307 12.2091 7.42792 12.4823 7.41434L10.4103 1.16948C10.6223 0.830088 11.0426 0.81898 11.3722 0.712842C16.5601 -0.943402 22.0322 0.353701 26.0659 3.98584H26.0646ZM11.8354 19.5523C14.5273 21.9046 18.9959 21.3258 20.9295 18.2996C24.2463 13.1075 18.719 6.98238 13.177 9.62719C9.35047 11.4537 8.64102 16.7606 11.8354 19.5523Z"
+                                fill="#F0EEEB"
+                            />
+                            <path
+                                d="M17.23 13.872C18.508 15.3443 16.6713 17.5337 14.9779 16.5415C12.5653 15.1271 15.3578 11.7159 17.23 13.872Z"
+                                fill="#F0EEEB"
+                            />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1288_2703">
+                                <rect
+                                    width="30"
+                                    height="30"
+                                    fill="white"
+                                    transform="translate(0.84082 0.00195312)"
+                                />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span class="ml-[0.5ch] loader-text-2"> radical face</span>
+                </p>
+            </div>
+        </div>
+
+        <header>
+            <nav>
+                <a href="">radical.face</a>
+            </nav>
+        </header>
+
+        <script src="src/js/main.js" type="module"></script>
+    </body>
+</html>
