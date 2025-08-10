@@ -5,58 +5,173 @@
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/src/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
         <title>Demo</title>
     </head>
-    <body class="bg-[#F0EEEB]">
+    <body class="bg-[#F0EEEB] overflow-hidden">
         <!-- loader -->
-        <div class="loader absolute inset-0">
-            <div class="h-[5vw] max-h-[3rem] py-4 px-12 bg-[#252525]"></div>
+        <div class="loader absolute isolate inset-0 bg-[#252525]">
             <div
-                class="h-[calc(100dvh-min(3rem,5vw))] grid place-content-center bg-[#252525]"
+                class="-z-10 absolute inset-0 top-[3rem] h-[calc(100dvh-3rem)]"
             >
-                <p
-                    class="text-[#F0EEEB] flex items-center text-3xl -mt-[min(3rem,5vw)] overflow-y-hidden leading-none py-0.5 loader-text will-change-transform"
-                >
-                    <span class="mr-[0.5ch] loader-text-1">All things </span>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="31"
-                        height="30"
-                        viewBox="0 0 31 30"
-                        fill="none"
-                        class="loader-icon animate-slow-spin"
+                <div class="h-[calc(100dvh-3rem)] grid place-content-center">
+                    <p
+                        class="text-[#F0EEEB] flex items-center text-3xl -mt-[3rem] overflow-y-hidden leading-none py-0.5 loader-text will-change-transform"
                     >
-                        <g clip-path="url(#clip0_1288_2703)">
-                            <path
-                                d="M26.0646 3.98584C32.8025 10.0517 32.3369 21.2863 25.1347 26.7944C24.9582 26.9289 24.1299 27.5657 23.9853 27.5287L20.0644 22.1761C19.9296 22.3144 19.2079 22.5649 19.2349 22.7414L21.2983 28.8505C21.0912 29.1899 20.6685 29.2047 20.3389 29.3071C13.8632 31.3361 6.94522 28.8196 3.23627 23.1227C-1.04612 16.5434 0.572489 7.67475 6.82024 3.03924C7.0702 2.85411 7.45372 2.58507 7.72573 2.49127L11.5339 7.73275C11.7533 7.90307 12.2091 7.42792 12.4823 7.41434L10.4103 1.16948C10.6223 0.830088 11.0426 0.81898 11.3722 0.712842C16.5601 -0.943402 22.0322 0.353701 26.0659 3.98584H26.0646ZM11.8354 19.5523C14.5273 21.9046 18.9959 21.3258 20.9295 18.2996C24.2463 13.1075 18.719 6.98238 13.177 9.62719C9.35047 11.4537 8.64102 16.7606 11.8354 19.5523Z"
-                                fill="#F0EEEB"
-                            />
-                            <path
-                                d="M17.23 13.872C18.508 15.3443 16.6713 17.5337 14.9779 16.5415C12.5653 15.1271 15.3578 11.7159 17.23 13.872Z"
-                                fill="#F0EEEB"
-                            />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_1288_2703">
-                                <rect
-                                    width="30"
-                                    height="30"
-                                    fill="white"
-                                    transform="translate(0.84082 0.00195312)"
+                        <span class="mr-[0.5ch] loader-text-1"
+                            >All things
+                        </span>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="31"
+                            height="30"
+                            viewBox="0 0 31 30"
+                            fill="none"
+                            class="loader-icon animate-slow-spin"
+                        >
+                            <g clip-path="url(#clip0_1288_2703)">
+                                <path
+                                    d="M26.0646 3.98584C32.8025 10.0517 32.3369 21.2863 25.1347 26.7944C24.9582 26.9289 24.1299 27.5657 23.9853 27.5287L20.0644 22.1761C19.9296 22.3144 19.2079 22.5649 19.2349 22.7414L21.2983 28.8505C21.0912 29.1899 20.6685 29.2047 20.3389 29.3071C13.8632 31.3361 6.94522 28.8196 3.23627 23.1227C-1.04612 16.5434 0.572489 7.67475 6.82024 3.03924C7.0702 2.85411 7.45372 2.58507 7.72573 2.49127L11.5339 7.73275C11.7533 7.90307 12.2091 7.42792 12.4823 7.41434L10.4103 1.16948C10.6223 0.830088 11.0426 0.81898 11.3722 0.712842C16.5601 -0.943402 22.0322 0.353701 26.0659 3.98584H26.0646ZM11.8354 19.5523C14.5273 21.9046 18.9959 21.3258 20.9295 18.2996C24.2463 13.1075 18.719 6.98238 13.177 9.62719C9.35047 11.4537 8.64102 16.7606 11.8354 19.5523Z"
+                                    fill="#F0EEEB"
                                 />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <span class="ml-[0.5ch] loader-text-2"> radical face</span>
-                </p>
+                                <path
+                                    d="M17.23 13.872C18.508 15.3443 16.6713 17.5337 14.9779 16.5415C12.5653 15.1271 15.3578 11.7159 17.23 13.872Z"
+                                    fill="#F0EEEB"
+                                />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1288_2703">
+                                    <rect
+                                        width="30"
+                                        height="30"
+                                        fill="white"
+                                        transform="translate(0.84082 0.00195312)"
+                                    />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="ml-[0.5ch] loader-text-2">
+                            radical face</span
+                        >
+                    </p>
+                </div>
             </div>
         </div>
 
-        <header>
-            <nav>
-                <a href="">radical.face</a>
+        <header
+            class="header h-[3rem] py-4 px-[2.5vw] border-b-2 border-b-[#252525] bg-[#F0EEEB] border-dashed"
+        >
+            <nav class="leading-none grid grid-cols-3">
+                <a href="" class="font-semibold place-self-start"
+                    >radical.face</a
+                >
+
+                <ul class="flex gap-3 place-self-center font-semibold">
+                    <li><a href="" class="nav__link">audio</a></li>
+                    <li><a href="" class="nav__link">writing</a></li>
+                    <li><a href="" class="nav__link">visual</a></li>
+                </ul>
+
+                <button
+                    class="w-4 h-4 p-0.5 border-none bg-transparent outline-1 rounded-full grid place-content-center place-self-end"
+                >
+                    <svg
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        transform=""
+                        id="injected-svg"
+                        class="w-full"
+                    >
+                        <!-- Boxicons v3.0 https://boxicons.com | License  https://docs.boxicons.com/free -->
+                        <path d="M4 5H20V7H4z" />
+                        <path d="M4 11H20V13H4z" />
+                        <path d="M4 17H20V19H4z" />
+                    </svg>
+                </button>
             </nav>
         </header>
+
+        <main
+            class="main min-h-[calc(100dvh-3rem)] w-full absolute origin-top-left bg-[#F0EEEB] will-change-transform px-[2.5vw]"
+        >
+            <h1
+                class="text-5xl font-bold uppercase font-display tracking-tighter select-none text-[clamp(5rem,7.5vw_+_3.2rem,10rem)] overflow-clip"
+            >
+                Radical face
+            </h1>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Inventore nostrum explicabo ullam. Quibusdam incidunt fuga
+                expedita laboriosam atque fugiat porro harum facere sit
+                provident ullam, deleniti error excepturi, tempore debitis!
+                Expedita mollitia a maiores magni vel consequuntur hic eveniet,
+                accusantium autem nobis consectetur facilis fuga velit magnam
+                temporibus, ea eaque, quae sint beatae id provident. Soluta
+                porro id quas amet quos, et ad rerum, nesciunt error cumque
+                sapiente itaque nulla! Quas quis ducimus facere dignissimos
+                aspernatur quidem eos blanditiis nobis sit obcaecati harum fuga
+                qui totam rerum cumque consequatur, alias consequuntur pariatur
+                perferendis labore libero? Nobis, perferendis quia explicabo
+                error consequuntur inventore ut voluptas adipisci illo quos
+                molestiae? Voluptatem omnis magnam aut, repudiandae suscipit ut
+                sequi consequuntur? Molestias, nemo quod. Culpa doloribus sint
+                omnis architecto incidunt fuga unde, hic, commodi nesciunt
+                vitae, consequuntur corrupti dignissimos reprehenderit nostrum
+                officiis nemo ipsa autem quo eius iste. Quod, sed amet in maxime
+                sapiente sint veniam ipsum assumenda odio dolorum cumque odit
+                distinctio vero laborum ullam omnis libero numquam vel? Sunt
+                fugiat et voluptate eos porro, provident suscipit. In voluptas
+                perspiciatis ab tenetur, eius ad maxime aliquam natus! Fuga
+                excepturi cupiditate aliquid inventore dignissimos molestias
+                dolorem quasi voluptatibus quidem nemo voluptatem quam
+                explicabo, non repudiandae veniam modi nulla. In, ipsam!
+                Corporis rem quam molestiae facilis vel eius eaque! Velit,
+                aspernatur? Vero dolore eaque quod aliquid dignissimos quis,
+                perferendis sunt quos repudiandae praesentium distinctio
+                deserunt rem illum excepturi nulla non, magnam id neque impedit
+                illo dolor commodi possimus repellat culpa? Ratione praesentium
+                excepturi alias saepe repellat pariatur atque repellendus ipsum,
+                vel voluptatibus temporibus. Laudantium quod earum, placeat
+                illum molestias dolores alias consequuntur maiores fuga ipsum et
+                tempore hic provident nostrum dignissimos, veniam assumenda
+                delectus quis quisquam doloremque perspiciatis totam mollitia
+                non debitis. Debitis obcaecati optio quisquam numquam ipsa
+                incidunt veritatis ut ea aperiam dolor quae dolorem qui
+                laboriosam magni, dolores odio. Nam quas adipisci itaque magni,
+                voluptate, consequuntur officiis esse, ab unde voluptatum ea
+                cum! Veritatis maxime at voluptate tempora temporibus. Aut ea a
+                reprehenderit consectetur fuga magni numquam, minima pariatur
+                reiciendis quas ratione hic expedita voluptatibus ullam,
+                provident, ducimus aperiam error eum dolores praesentium eius
+                perferendis placeat debitis. Totam laudantium cumque ut
+                architecto aut consectetur magnam labore, aliquam ipsa
+                recusandae minus officia, quos, accusamus assumenda minima
+                voluptatem commodi nulla! Quia animi earum delectus amet.
+                Provident natus, neque cumque dolore ut, enim quod,
+                reprehenderit debitis laudantium autem a accusantium culpa saepe
+                veniam deserunt quo consequuntur tempora vero illo ad
+                doloremque! Esse perspiciatis maiores architecto deleniti! Quia,
+                sunt neque repellat ex aut quod dignissimos consequuntur nam
+                tempore dolor iusto assumenda enim, aspernatur qui facilis
+                necessitatibus cumque vitae veritatis libero porro cum fuga!
+                Reiciendis veritatis atque, praesentium aperiam ullam quia ipsam
+                assumenda molestiae consequatur harum doloremque accusantium
+                dolore eaque deserunt fugiat obcaecati minima inventore officiis
+                quod alias nam voluptas fuga repudiandae! Ad nobis eos aperiam
+                eligendi at impedit, doloremque minus quidem maiores qui ipsum
+                quibusdam modi earum est. Ab architecto amet natus, perferendis
+                nam officia quia dolorum quasi hic possimus eum sed! Quibusdam,
+                et asperiores? Aut, architecto!
+            </p>
+        </main>
 
         <script src="src/js/main.js" type="module"></script>
     </body>

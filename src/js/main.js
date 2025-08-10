@@ -38,4 +38,39 @@ loaderTl
         repeat: -1,
     })
     .from(".loader-text-1", { duration: 0.5, x: 20 }, "-=3.5")
-    .from(".loader-text-2", { duration: 0.5, x: -20 }, "<");
+    .from(".loader-text-2", { duration: 0.5, x: -20 }, "<")
+    .from(".main", {
+        duration: 1.5,
+        rotate: 90,
+        opacity: 0.5,
+        ease: "power4.out",
+    })
+    .from(
+        ".header",
+        {
+            duration: 1,
+            yPercent: -100,
+            ease: "power4.out",
+        },
+        "-=0.8"
+    )
+    .to("body", {
+        css: {
+            overflow: "auto",
+        },
+    })
+    .to(".loader", {
+        css: {
+            display: "none",
+        },
+    });
+
+const navLinks = document.querySelectorAll(".nav__link");
+navLinks.forEach((link) => {
+    link.addEventListener("mouseenter", (e) => {
+        link.classList.add("hovered");
+    });
+    link.addEventListener("mouseleave", (e) => {
+        link.classList.remove("hovered");
+    });
+});
