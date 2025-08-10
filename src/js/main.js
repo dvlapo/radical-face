@@ -44,6 +44,7 @@ loaderTl
         rotate: 90,
         opacity: 0.5,
         ease: "power4.out",
+        delay: 0.8,
     })
     .from(
         ".header",
