@@ -16,16 +16,12 @@
     <body class="bg-[#F0EEEB] overflow-hidden">
         <!-- loader -->
         <div class="loader absolute isolate inset-0 bg-[#252525]">
-            <div
-                class="-z-10 absolute inset-0 top-[3rem] h-[calc(100dvh-3rem)]"
-            >
-                <div class="h-[calc(100dvh-3rem)] grid place-content-center">
+            <div class="-z-10 absolute inset-0 top-12">
+                <div class="grid place-content-center h-full">
                     <p
-                        class="text-[#F0EEEB] flex items-center text-3xl -mt-[3rem] overflow-y-hidden leading-none py-0.5 loader-text will-change-transform"
+                        class="text-[#F0EEEB] flex items-end text-lg md:text-3xl -mt-12 overflow-y-hidden leading-none py-0.5 loader-text will-change-transform"
                     >
-                        <span class="mr-[0.5ch] loader-text-1"
-                            >All things
-                        </span>
+                        <span class="mr-[0.5ch] loader-text-1">All things</span>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="31"
@@ -55,8 +51,8 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <span class="ml-[0.5ch] loader-text-2">
-                            radical face</span
+                        <span class="ml-[0.5ch] loader-text-2"
+                            >radical face</span
                         >
                     </p>
                 </div>
@@ -64,7 +60,7 @@
         </div>
 
         <header
-            class="header h-[3rem] py-4 px-[2.5vw] border-b-2 border-b-[#252525] bg-[#F0EEEB] border-dashed"
+            class="header h-12 py-4 px-[2.5vw] border-b-2 border-b-[#252525] bg-[#F0EEEB] border-dashed"
         >
             <nav class="leading-none grid grid-cols-3">
                 <a href="" class="font-semibold place-self-start"
@@ -72,9 +68,9 @@
                 >
 
                 <ul class="flex gap-3 place-self-center font-semibold">
-                    <li><a href="" class="nav__link">audio</a></li>
-                    <li><a href="" class="nav__link">writing</a></li>
-                    <li><a href="" class="nav__link">visual</a></li>
+                    <li><a href="" class="nav__link text-xs">audio</a></li>
+                    <li><a href="" class="nav__link text-xs">writing</a></li>
+                    <li><a href="" class="nav__link text-xs">visual</a></li>
                 </ul>
 
                 <button
