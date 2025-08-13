@@ -84,10 +84,8 @@ loaderTl
         latest,
         {
             opacity: 0,
-            yPercent: 100,
-            stagger: 0.05,
-            duration: 1.5,
-            ease: "power4.out",
+            yPercent: 80,
+            stagger: 0.08,
         },
         "<"
     )
