@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
-gsap.registerPlugin(SplitText);
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const loaderSplitText = new SplitText(".loader-text", {
     type: "words",
