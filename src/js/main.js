@@ -12,6 +12,11 @@ const mainHeadingSplitText = new SplitText(".g-main__heading", {
 });
 
 const loaderTl = gsap.timeline({
+    // scrollTrigger: {
+    //     trigger: ".g-pin-list",
+    //     start: "top top",
+    //     end: "bottom top",
+    // },
     defaults: {
         ease: "power1.inOut",
     },
