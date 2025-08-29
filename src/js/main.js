@@ -1,7 +1,13 @@
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(SplitText, ScrollTrigger);
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+gsap.registerPlugin(SplitText, ScrollTrigger, ScrollSmoother);
+
+// ScrollSmoother.create({
+//     smooth: 2,
+//     effects: true,
+// });
 
 const loaderSplitText = new SplitText(".loader-text", {
     type: "words",
@@ -12,11 +18,6 @@ const mainHeadingSplitText = new SplitText(".g-main__heading", {
 });
 
 const loaderTl = gsap.timeline({
-    // scrollTrigger: {
-    //     trigger: ".g-pin-list",
-    //     start: "top top",
-    //     end: "bottom top",
-    // },
     defaults: {
         ease: "power1.inOut",
     },
@@ -104,18 +105,56 @@ loaderTl
         },
         "<"
     )
-    .to(".g-body", {
-        css: {
-            overflow: "auto",
-        },
-    })
+    // .to(".g-body", {
+    //     css: {
+    //         overflow: "auto",
+    //     },
+    // })
     .to(".g-loader", {
         css: {
             display: "none",
         },
+        onComplete: () => {
+            ScrollTrigger.refresh();
+        },
     });
 
-const navLinks = document.querySelectorAll(".nav__link");
+gsap.to(".g-header", {
+    scrollTrigger: {
+        trigger: ".g-main",
+        start: "top top",
+        toggleActions: "play reset none reverse",
+        onUpdate: ({ direction }) => {
+            if (direction === -1) {
+                gsap.to(".g-header", {
+                    y: "0%",
+                    ease: "expo.inOut",
+                    duration: 0.5,
+                });
+            } else if (direction === 1) {
+                gsap.to(".g-header", {
+                    y: "-100%",
+                    ease: "expo.inOut",
+                    duration: 0.25,
+                });
+            }
+        },
+    },
+});
+
+gsap.to(".g-pin-parent", {
+    scrollTrigger: {
+        trigger: ".g-pin-parent",
+        start: "top top",
+        end: "bottom 50%",
+        pin: ".g-pin-list",
+        pinSpacing: false,
+        pinType: "transform",
+        // markers: true,
+    },
+});
+
+const navLinks = document.querySelectorAll(".a-link-hover");
 navLinks.forEach((link) => {
     link.addEventListener("mouseenter", (e) => {
         link.classList.add("hovered");
